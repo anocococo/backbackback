@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ẩm Thực Việt Nam - Bắc Trung Nam</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #e74c3c;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .search-container {
+            margin: 1rem auto;
+            width: 80%;
+            max-width: 600px;
+        }
+        
+        .search-container input {
+            width: 80%;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .search-container button {
+            width: 20%;
+            padding: 0.5rem;
+            background-color: #c0392b;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        
+        .main-content {
+            display: flex;
+            margin: 2rem auto;
+            width: 90%;
+            max-width: 1200px;
+        }
+        
+        .left-column {
+            flex: 70%;
+            padding-right: 2rem;
+        }
+        
+        .right-column {
+            flex: 30%;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .featured-dish {
+            background-color: #fff;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .featured-dish img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        
+        .dish-title {
+            color: #e74c3c;
+            margin-bottom: 0.5rem;
+        }
+        
+        .dish-region {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+        }
+        
+        .quick-links h3 {
+            color: #e74c3c;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        
+        .quick-links ul {
+            list-style: none;
+        }
+        
+        .quick-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .quick-links a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .quick-links a:hover {
+            color: #e74c3c;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        .recipe-upload {
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .recipe-upload h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .recipe-upload form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .recipe-upload input, 
+        .recipe-upload textarea {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px;
+        }
+        
+        .recipe-upload button {
+            padding: 0.7rem;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .recipe-upload button:hover {
+            background-color: #c0392b;
+        }
+        
+        .region-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .region-tab {
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .region-tab.active {
+            background-color: #e74c3c;
+            color: white;
+            border-color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ẩm Thực Việt Nam</h1>
+        <p>Khám phá tinh hoa ẩm thực ba miền Bắc - Trung - Nam</p>
+        
+        <div class="search-container">
+            <input type="text" placeholder="Tìm kiếm món ăn...">
+            <button>Tìm kiếm</button>
+        </div>
+    </header>
+    
+    <div class="region-tabs">
+        <div class="region-tab active">Tất cả</div>
+        <div class="region-tab">Miền Bắc</div>
+        <div class="region-tab">Miền Trung</div>
+        <div class="region-tab">Miền Nam</div>
+    </div>
+    
+    <div class="main-content">
+        <div class="left-column">
+            <div class="featured-dish">
+                <img src="https://via.placeholder.com/800x400?text=Phở+Hà+Nội" alt="Phở Hà Nội">
+                <h2 class="dish-title">Phở Hà Nội</h2>
+                <p class="dish-region">Miền Bắc</p>
+                <p>Phở là món ăn truyền thống của Việt Nam, có nguồn gốc từ Hà Nội. Món ăn này được xem như một trong những biểu tượng của ẩm thực Việt Nam.</p>
+                <h3>Công thức:</h3>
+                <p>1. Chuẩn bị nước dùng từ xương bò, thảo quả, hoa hồi, quế, gừng nướng<br>
+                2. Thái mỏng thịt bò<br>
+                3. Trần bánh phở qua nước sôi<br>
+                4. Xếp bánh phở vào tô, thêm thịt bò, chan nước dùng nóng<br>
+                5. Thêm hành lá, rau thơm và ăn kèm với chanh, ớt</p>
+            </div>
+            
+            <div class="featured-dish">
+                <img src="https://via.placeholder.com/800x400?text=Bún+Bò+Huế" alt="Bún Bò Huế">
+                <h2 class="dish-title">Bún Bò Huế</h2>
+                <p class="dish-region">Miền Trung</p>
+                <p>Bún bò Huế là đặc sản của cố đô Huế, với hương vị đậm đà, cay nồng đặc trưng của ẩm thực miền Trung.</p>
+                <h3>Công thức:</h3>
+                <p>1. Nấu nước dùng từ xương bò, sả, mắm ruốc Huế<br>
+                2. Ướp thịt bò với gia vị<br>
+                3. Luộc bún và xếp vào tô<br>
+                4. Thêm thịt bò, giò heo, chan nước dùng<br>
+                5. Ăn kèm với rau sống, giá và chanh ớt</p>
+            </div>
+            
+            <div class="featured-dish">
+                <img src="https://via.placeholder.com/800x400?text=Bánh+Xèo+Miền+Nam" alt="Bánh Xèo Miền Nam">
+                <h2 class="dish-title">Bánh Xèo Miền Nam</h2>
+                <p class="dish-region">Miền Nam</p>
+                <p>Bánh xèo miền Nam có kích thước lớn hơn bánh xèo miền Trung, vỏ bánh giòn, nhân đa dạng với tôm, thịt, giá và đậu xanh.</p>
+                <h3>Công thức:</h3>
+                <p>1. Pha bột với nước cốt dừa, nghệ<br>
+                2. Nhân bánh gồm tôm, thịt ba chỉ, giá đỗ, đậu xanh<br>
+                3. Đổ bánh trên chảo nóng với dầu<br>
+                4. Gấp bánh khi chín vàng<br>
+                5. Ăn kèm với rau sống và nước mắm chua ngọt</p>
+            </div>
+        </div>
+        
+        <div class="right-column">
+            <div class="quick-links">
+                <h3>Món ăn miền Bắc</h3>
+                <ul>
+                    <li><a href="#">Bún chả Hà Nội</a></li>
+                    <li><a href="#">Bánh cuốn Thanh Trì</a></li>
+                    <li><a href="#">Chả cá Lã Vọng</a></li>
+                    <li><a href="#">Bún thang</a></li>
+                    <li><a href="#">Bánh tôm Hồ Tây</a></li>
+                </ul>
+                
+                <h3>Món ăn miền Trung</h3>
+                <ul>
+                    <li><a href="#">Mì Quảng</a></li>
+                    <li><a href="#">Cơm hến</a></li>
+                    <li><a href="#">Bánh bèo Huế</a></li>
+                    <li><a href="#">Bánh canh Nam Phổ</a></li>
+                    <li><a href="#">Bún mắm nêm</a></li>
+                </ul>
+                
+                <h3>Món ăn miền Nam</h3>
+                <ul>
+                    <li><a href="#">Hủ tiếu Nam Vang</a></li>
+                    <li><a href="#">Bánh tráng trộn</a></li>
+                    <li><a href="#">Cá lóc nướng trui</a></li>
+                    <li><a href="#">Bún mắm</a></li>
+                    <li><a href="#">Lẩu mắm</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="recipe-upload">
+            <h3>Chia sẻ công thức của bạn</h3>
+            <form>
+                <input type="text" placeholder="Tên món ăn">
+                <select>
+                    <option>Chọn vùng miền</option>
+                    <option>Miền Bắc</option>
+                    <option>Miền Trung</option>
+                    <option>Miền Nam</option>
+                </select>
+                <textarea placeholder="Nguyên liệu và cách làm" rows="5"></textarea>
+                <input type="file" accept="image/*">
+                <button type="submit">Gửi công thức</button>
+            </form>
+        </div>
+        <p>© 2023 Ẩm Thực Việt Nam - Bảo lưu mọi quyền</p>
+    </footer>
+    
+    <script>
+        // JavaScript để xử lý tab vùng miền
+        const tabs = document.querySelectorAll('.region-tab');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Xóa class active khỏi tất cả các tab
+                tabs.forEach(t => t.classList.remove('active'));
+                
+                // Thêm class active vào tab được click
+                tab.classList.add('active');
+                
+                // Ở đây có thể thêm code để lọc món ăn theo vùng miền
+                // Ví dụ: hiển thị chỉ món ăn miền Bắc nếu click vào tab Miền Bắc
+            });
+        });
+        
+        // Xử lý form tìm kiếm
+        const searchForm = document.querySelector('.search-container');
+        searchForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const searchTerm = searchForm.querySelector('input').value;
+            alert(`Đang tìm kiếm: ${searchTerm}`);
+            // Thực hiện tìm kiếm thực tế ở đây
+        });
+    </script>
+</body>
+</html>
